@@ -2,6 +2,16 @@ package counter;
 
 public class WordProcessor implements Counter {
 
+    private String text;
+
+    public void setText(String text) {
+        this.text = text;
+    }
+
+    public String getText() {
+        return this.text;
+    }
+
     @Override
     public int countWords(String sentence) {
         if (sentence == null || sentence.trim().isEmpty()) {
