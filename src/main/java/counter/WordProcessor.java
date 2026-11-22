@@ -2,18 +2,21 @@ package counter;
 
 public class WordProcessor implements Counter {
 
-    private String text;
-
-    public void setText(String text) {
-        this.text = text;
-    }
+    private String text = "";
 
     public String getText() {
         return this.text;
     }
 
+    public void setText(String text) {
+        this.text = text;
+    }
+
     @Override
     public int countWords(String sentence) {
+        if (sentence == null) {
+            sentence = this.text;
+        }
         if (sentence == null || sentence.trim().isEmpty()) {
             return 0;
         }
@@ -22,6 +25,9 @@ public class WordProcessor implements Counter {
 
     @Override
     public int countLetters(String sentence) {
+        if (sentence == null) {
+            sentence = this.text;
+        }
         if (sentence == null || sentence.isEmpty()) {
             return 0;
         }
@@ -36,6 +42,9 @@ public class WordProcessor implements Counter {
 
     @Override
     public int getLength(String sentence) {
+        if (sentence == null) {
+            sentence = this.text;
+        }
         if (sentence == null) {
             return 0;
         }
