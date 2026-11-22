@@ -21,7 +21,8 @@ public interface Counter {
     int countWords(String sentence);
 
     // TODO [Step 1.2]: Declare int countLetters(String sentence);
-
+    int countLetters(String sentence);
     // TODO [Step 1.3]: Declare int getLength(String sentence);
 
+    int getLength(String sentence);
 }
